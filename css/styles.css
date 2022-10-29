@@ -30,7 +30,6 @@ h3,
 h4,
 h5,
 h6,
-ul,
 p {
   margin: 0;
 }
@@ -41,10 +40,15 @@ img {
   height: auto;
 }
 
-.list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+address {
+  font-style: normal;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
 .section {
@@ -56,6 +60,16 @@ img {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 /* header */
@@ -71,7 +85,7 @@ img {
 
 .logo {
   text-decoration: none;
-  color: var(--logo-color);
+  color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -79,15 +93,11 @@ img {
 }
 
 .logo-style {
-  color: var(--accent-color);
+  color: var(--logo-color);
 }
 
 .header-nav {
   margin-left: 93px;
-}
-
-.link {
-  text-decoration: none;
 }
 
 .site-nav {
@@ -168,13 +178,13 @@ img {
   font-size: var(--secondary-font-size);
   line-height: 1.9;
   letter-spacing: 0.06em;
-  cursor: pointer;
   border-width: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
   padding: 10px 32px;
   text-align: center;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* features section */
@@ -223,6 +233,10 @@ img {
 
 /* works and team sections */
 
+.works {
+  padding-top: 0;
+}
+
 .works-title,
 .team-title {
   color: var(--secondary-color);
@@ -247,6 +261,10 @@ img {
   flex-basis: calc(100% / var(--features-items) - var(--projects-list-gap));
   margin-left: var(--projects-list-gap);
   margin-top: var(--projects-list-gap);
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .member-content {
@@ -273,21 +291,14 @@ img {
 
 .footer {
   background-color: var(--dark-color);
+  padding: 60px 0;
 }
 
-.footer > .logo {
+.footer .logo-style {
   color: var(--thirdy-color);
 }
 
-.footer > .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 .address {
-  font-size: var(--primary-font-size);
-  line-height: 1.7;
-  font-style: normal;
   margin-top: 20px;
 }
 
@@ -302,6 +313,8 @@ img {
 .address .map {
   text-decoration: none;
   color: var(--thirdy-color);
+  font-size: var(--primary-font-size);
+  line-height: 1.7;
 }
 
 .address .link:hover,
@@ -355,13 +368,10 @@ img {
   margin-top: var(--projects-list-gap);
 }
 
-.projects-item > .item {
-  border: 1px solid var(--border-color);
-  border-top: none;
-}
-
 .item-content {
   padding: 20px 24px;
+  border: 1px solid var(--border-color);
+  border-top: none;
 }
 
 .projects-subtitle {
